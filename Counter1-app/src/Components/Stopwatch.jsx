@@ -31,7 +31,10 @@ const StopWatch=()=>{
         const min=Math.floor((time%3600)/60);
         const sec =time%60;
         // return ${hours}:${min}:${sec}
-        return `${hours.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+        //return `${hours.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+        return  `${hours < 10 ? '0' + hours : hours}:` +
+       ` ${min< 10 ? '0' + min : min}:` +
+       ` ${sec < 10 ? '0' + sec: sec}`;
     }
     return (
         <div>
